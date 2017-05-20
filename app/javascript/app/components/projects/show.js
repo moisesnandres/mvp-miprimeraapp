@@ -180,9 +180,9 @@ export class ProjectShow extends Component {
           <Row>
             <Col md={12}>
               <h3 className="text-bold">Propuestas similares:</h3>
-              <Link to="/project/1">Projecto X</Link><br/>
-              <Link to="/project/2">Projecto Y</Link><br/>
-              <Link to="/project/3">Projecto Z</Link><br/>
+              <Link to={`/projects/${projects[projects.length - 1].id}`}>{projects[projects.length - 1].name}</Link><br/>
+              <Link to={`/projects/${projects[projects.length - 2].id}`}>{projects[projects.length - 2].name}</Link><br/>
+              <Link to={`/projects/${projects[projects.length - 3].id}`}>{projects[projects.length - 3].name}</Link><br/>
             </Col>
           </Row>
         </Grid>
