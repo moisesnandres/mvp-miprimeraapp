@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520160158) do
+ActiveRecord::Schema.define(version: 20170520164926) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -30,6 +30,24 @@ ActiveRecord::Schema.define(version: 20170520160158) do
     t.string "password"
     t.integer "category_id"
     t.index ["category_id"], name: "index_companies_on_category_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.integer "company_id"
+    t.integer "step_id"
+    t.string "name"
+    t.string "description"
+    t.string "percentage"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_projects_on_company_id"
+    t.index ["step_id"], name: "index_projects_on_step_id"
+  end
+
+  create_table "steps", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "type_users", force: :cascade do |t|
