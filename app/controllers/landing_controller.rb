@@ -1,4 +1,6 @@
 class LandingController < ApplicationController
-  def index
-  end
+
+    def index
+        render layout: 'general'
+    end
 end
