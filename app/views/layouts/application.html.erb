@@ -9,7 +9,44 @@
     <%= javascript_pack_tag 'app', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="platform">
+    <aside>
+      <div class="profile">
+        <div class="img-container">
+          <img src="http://lorempixel.com/200/200/people" alt="">
+        </div>
+        <div class="profile__name">
+          <h4>Luis Lopez</h4>
+          <a href="#"><small>Ver mi perfil</small></a>
+        </div>
+      </div>
+
+      <div class="my_projects">
+        <h3>Mis proyectos</h3>
+        <ul>
+          <li>
+            <span>Proyecto A</span>
+            <small class="state wip">En ejecución</small>
+          </li>
+          <li>
+            <span>Proyecto B</span>
+            <small class="state done">Terminado</small>
+          </li>
+          <li>
+            <span>Proyecto Largo Lorem ipsum dolor sit amet</span>
+            <small class="state done">Terminado</small>
+          </li>
+          <li>
+            <span>Proyecto D</span>
+            <small class="state done">Terminado</small>
+          </li>
+          <li>
+            <span>Proyecto E</span>
+            <small class="state done">Terminado</small>
+          </li>
+        </ul>
+      </div>
+    </aside>
     <%= yield %>
   </body>
 </html>
