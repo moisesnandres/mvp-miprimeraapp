@@ -6,14 +6,33 @@ ul {
 
 .text {
   &-12 { font-size: 12px; }
-  &-green { color: #2ecc71; }
-  &-red { color: #e74c3c; }
-  &-orange { color: #d35400; }
-  &-blue { color: rgba(41, 128, 185,1.0); }
+  &-green { color: #2ecc71 !important; }
+  &-red { color: #e74c3c !important; }
+  &-orange { color: #d35400 !important; }
+  &-blue { color: rgba(41, 128, 185,1.0) !important; }
+  &-bold { font-weight: bold; }
+  &-midnight { color: rgba(44, 62, 80,1.0) !important; }
+  &-cp { color: rgba(52, 73, 94,1.0) !important; }
+  &-center { text-align: center; }
 }
 
 .bg {
   &-grey { background-color: rgba(0,0,0,.5); }
+}
+
+.project {
+  color: #333 !important;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.width {
+  &-40 { width: 40px; }
+}
+
+.padding {
+  &-topBottom-10 { padding: 10px 0; }
 }
 
 #app {
@@ -31,7 +50,9 @@ ul {
 .margin {
   &-none { margin: 0 !important; }
   &-top-5 { margin: 5px 0 0 0 !important; }
+  &-top-15 { margin: 15px 0 0 0 !important; }
   &-bottom-5 { margin: 0 0 5px 0 !important; }
+  &-bottom-20 { margin: 0 0 20px 0 !important; }
 }
 
 aside {
