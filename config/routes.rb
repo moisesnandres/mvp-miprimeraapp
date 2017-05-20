@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
-  get '/' => 'landing#index'
+    namespace :api do 
+        namespace :v1 do
+            namespace :login do
+                post 'create'
+                delete 'destroy'
+            end
+        end
+    end
+    get '/' => 'landing#index'
 
-  get '*path', to: 'application#index'
-  # get'/', to: 'application#index'
+    get '*path', to: 'application#index'
 end
