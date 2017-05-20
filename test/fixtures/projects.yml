@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: one
+  step: one
+  name: MyString
+  description: MyString
+  percentage: MyString
+
+two:
+  company: two
+  step: two
+  name: MyString
+  description: MyString
+  percentage: MyString
