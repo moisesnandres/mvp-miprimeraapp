@@ -11,6 +11,9 @@ Rails.application.routes.draw do
             namespace :companies do
                 post 'create'
             end
+            namespace :projects do
+                # post 'create'
+            end
         end
     end
     get '/' => 'landing#index'
