@@ -3,6 +3,7 @@ class Api::V1::ProjectsController < ApplicationController
 
     def index
         @projects = Project.all
+        @companies = Company.all
     end
     def create
         project = Project.new(project_params)
