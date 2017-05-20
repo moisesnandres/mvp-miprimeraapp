@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    namespace :api do 
+    namespace :api, defaults: { format: :json } do
         namespace :v1 do
             namespace :login do
                 post 'create'
@@ -15,6 +15,7 @@ Rails.application.routes.draw do
                 post 'create'
                 post 'delete'
                 post 'update'
+                get 'index'
             end
         end
     end
