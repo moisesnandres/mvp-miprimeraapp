@@ -110,6 +110,18 @@ export class ProjectShow extends Component {
                     </ol>
                   </Col>
                 </Row>
+                <Row>
+                  <Col md={2} className="text-12">Repositorio del proyecto</Col>
+                  <Col md={10}>
+                    <a href="https://github.com/moisesnandres/mvp-miprimeraapp">https://github.com/moisesnandres/mvp-miprimeraapp</a>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md={2} className="text-12">Tablero de trabajo</Col>
+                  <Col md={10}>
+                    <a href="https://trello.com/b/OXff2zMV/mi-primera-app-example">https://trello.com/b/OXff2zMV/mi-primera-app-example</a>
+                  </Col>
+                </Row>
               </ProjectInformation>
             </Col>
             <Col md={3}>
