@@ -17,6 +17,11 @@ Rails.application.routes.draw do
                 post 'update'
                 get 'index'
             end
+            namespace :assignments do
+                post 'create'
+                post 'left'
+                post 'aprobe'
+            end
         end
     end
     get '/' => 'landing#index'

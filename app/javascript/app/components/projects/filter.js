@@ -17,9 +17,11 @@ const Filter = (props) => (
   <FilterContainer>
     <Row>
       <Col md={3}>
-        <FormControl
+        <input
+          className="form-control"
           type="text"
           placeholder="Buscar project"
+          onChange={ (e) => props.handleChangeText(e.target.value) }
         />
       </Col>
       <Col md={3}>

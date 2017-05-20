@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { connect } from 'react-redux';
 import {
   Grid,
@@ -6,10 +7,29 @@ import {
   Col
 } from 'react-bootstrap';
 
+import {
+  setProjects,
+  setSearchText
+} from '../../actions/index';
+
+import { getFilteredProjects } from '../../selectors/';
+
 import ProjectList from './project-list';
 import Filter from './filter';
 
 class ProjectIndex extends Component {
+
+  componentDidMount() {
+    axios.get('/api/v1/projects/index')
+      .then(response => {
+        console.log('projects response', response);
+        this.props.dispatch(setProjects(response.data.projects))
+      })
+  }
+
+  handleChangeText = (value) => {
+    this.props.dispatch(setSearchText(value));
+  }
 
   render() {
     return (
@@ -19,13 +39,15 @@ class ProjectIndex extends Component {
           <h5>Ayuda a las empresas a completar sus proyectos sin fines de lucro y a cambio recibe un certificado validando tu participación en el proyecto</h5>
         </Row>
         <Row>
-          <Filter />
+          <Filter handleChangeText={this.handleChangeText}/>
         </Row>
-        <ProjectList />
+        <ProjectList projects={this.props.projects} />
       </Grid>
     )
   }
 
 }
 
-export default ProjectIndex;
+const mapStateToProps = (state) => ({ projects: getFilteredProjects(state), searchText: state.projects.searchText });
+
+export default connect(mapStateToProps)(ProjectIndex);

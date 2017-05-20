@@ -58,13 +58,13 @@ header {
 
 .what-you-win, .how-it-works {
   padding: 2em 0 1em;
-  h2 {
+  h2  {
     text-align: center;
     margin: 0 0 1em 0;
   }
 }
 
-.what-you-win {
+.what-you-win, .how-it-works {
   background-color: #F0F4F6;
   .img-container {
     width: 120px;
