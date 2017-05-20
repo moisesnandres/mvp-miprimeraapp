@@ -10,7 +10,8 @@ class LandingController < ApplicationController
 
     def best_practices
       render layout: 'general'
-
+    end
+    
     def login
         render layout: 'general'
     end
