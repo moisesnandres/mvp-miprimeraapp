@@ -1,0 +1,54 @@
+%header.static
+  .max-container
+    %h1 Mi primera App
+    %nav
+      %ul.nav.nav-pills
+        %li{:role => "presentation"}
+          %a{:href => "#"} Ingresar
+        %li.active{:role => "presentation"}
+          %a{:href => "#"} Registrarse
+
+.best_practices
+  .max-container
+    %h2 Mejores prácticas
+    .best_practices_container
+      .best_practice
+        .img-container
+          = image_tag 'bp-3'
+        %p Validar los conocimientos con entrevistas
+      .best_practice
+        .img-container
+          = image_tag 'bp-2'
+        %p Tecnologias de vanguardia
+      .best_practice
+        .img-container
+          = image_tag 'bp-1'
+        %p Metodologías ágiles
+    .guide
+      %h3 Enlaces de ayuda
+      %ul
+        %li
+          %a{:href => "https://guides.github.com/introduction/flow/", target: 'blank'} GitHub Flow
+        %li
+          %a{:href => "http://airbnb.io/projects/styleguides/", target: 'blank'} Guía de estilos de Airbnb
+        %li
+          %a{:href => "https://sass-guidelin.es/", target: 'blank'} SASS Guidelines
+        %li
+          %a{:href => "http://eslint.org/", target: 'blank'} ESLint
+        %li
+          %a{:href => "https://github.com/bbatsov/ruby-style-guide", target: 'blank'} Ruby Style Guide
+        %li
+          %a{:href => "https://www.python.org/dev/peps/pep-0008/", target: 'blank'} PEP 8
+        %li
+          %a{:href => "https://blog.risingstack.com/react-js-best-practices-for-2016/", target: 'blank'} React best practices
+        %li
+          %a{:href => "http://json-ld.org/spec/latest/json-ld-api-best-practices/", target: 'blank'} JSON API best practices
+        %li
+          %a{:href => "https://github.com/schwa/Swift-Community-Best-Practices", target: 'blank'} Swift best practices
+        %li
+          %a{:href => "http://howtodoinjava.com/java-best-practices/", target: 'blank'} JAVA best practices
+
+
+%footer
+  .max-container
+    %small RRR Team
