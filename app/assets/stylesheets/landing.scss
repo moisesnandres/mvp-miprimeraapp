@@ -1,3 +1,103 @@
 // Place all the styles related to the landing controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.max-container {
+  max-width: 1000px;
+  padding: 0 2em;
+  margin: 0 auto;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 1em 0;
+  background-color: #333;
+
+  .max-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-size: 1.7em;
+    margin: 0 1em 0 0;
+    color: #fff;
+  }
+
+  .nav-pills > li+li {
+    margin-left: .5em;
+  }
+
+  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #2196F2;
+  }
+}
+
+.mvp {
+  height: 100vh;
+  background-color: #545561;
+  color: #fff;
+
+  .max-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+.panel-default {
+  padding: 1em;
+}
+
+.how-it-works {
+  background-color: #fff;
+}
+
+.what-you-win, .how-it-works {
+  padding: 2em 0 1em;
+  h2 {
+    text-align: center;
+    margin: 0 0 1em 0;
+  }
+}
+
+.what-you-win {
+  background-color: #F0F4F6;
+  .img-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1em;
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+footer {
+  padding: .5em 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 640px) {
+  .win__container, .work__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    article {
+      flex: 0 0 48%;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .win__container, .work__container {
+    article {
+      flex: 0 0 32%;
+    }
+  }
+}
