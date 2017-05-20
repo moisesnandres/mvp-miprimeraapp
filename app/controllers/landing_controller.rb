@@ -7,4 +7,8 @@ class LandingController < ApplicationController
     def my_profile
       render layout: 'general'
     end
+
+    def login
+        render layout: 'general'
+    end
 end

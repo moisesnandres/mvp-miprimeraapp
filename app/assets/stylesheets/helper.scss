@@ -8,6 +8,7 @@ ul {
   &-12 { font-size: 12px; }
   &-green { color: #2ecc71 !important; }
   &-red { color: #e74c3c !important; }
+  &-white { color: #fff !important; }
   &-orange { color: #d35400 !important; }
   &-blue { color: rgba(41, 128, 185,1.0) !important; }
   &-bold { font-weight: bold; }
@@ -201,5 +202,38 @@ aside {
 @media screen and (min-width: 960px) {
   .profile .projects .project {
     flex-basis: 32%;
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.login {
+  padding-top: 60px;
+  &-container {
+    width: 400px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 40px;
+  }
+  &-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(46, 204, 113,1.0);
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    outline: none;
+    border: 1px solid transparent;
+    &:hover {
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+    }
   }
 }
