@@ -1,5 +1,4 @@
 class LandingController < ApplicationController
-
     def index
         render layout: 'general'
     end
@@ -11,7 +10,7 @@ class LandingController < ApplicationController
     def best_practices
       render layout: 'general'
     end
-    
+
     def login
         render layout: 'general'
     end

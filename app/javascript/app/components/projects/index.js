@@ -35,7 +35,7 @@ class ProjectIndex extends Component {
     return (
       <Grid className="">
         <Row>
-          <h2 className="text-blue">Encuentra tu projecto ideal y se participe de proyectos reales</h2>
+          <h2 className="text-blue">Encuentra el projecto ideal para ti y gana la experiencia que necesitas!</h2>
           <h5>Ayuda a las empresas a completar sus proyectos sin fines de lucro y a cambio recibe un certificado validando tu participación en el proyecto</h5>
         </Row>
         <Row>
