@@ -12,7 +12,9 @@ Rails.application.routes.draw do
                 post 'create'
             end
             namespace :projects do
-                # post 'create'
+                post 'create'
+                post 'delete'
+                post 'update'
             end
         end
     end
