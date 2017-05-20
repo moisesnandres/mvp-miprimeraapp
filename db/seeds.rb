@@ -35,3 +35,7 @@ puts pro1.errors.messages
 pro2 = Project.create(name: 'Proyecto Y', step: Step.first, company: Company.second, description: 'Pro Pro Pro Pro Pro Pro Pro Pro Pro Pro Pro Proaaaaa')
 puts pro2.errors.messages
 assi = Assignment.create(project: Project.first, user: User.first, status: false)
+
+10.times do |n|
+    prox = Project.create(name: Faker::Address.street_name, step: Step.first, company: Company.first, description: Faker::Company.name*20)
+end
