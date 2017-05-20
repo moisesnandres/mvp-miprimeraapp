@@ -1,12 +1,11 @@
 %header
   .max-container
-    %h1 Mi Primera App
+    %h1
+      %a.text-white{href: '/'} Mi primera App
     %nav
       %ul.nav.nav-pills
         %li{:role => "presentation"}
-          %a{:href => "#"} Ingresar
-        %li.active{:role => "presentation"}
-          %a{:href => "#"} Registrarse
+          %a{:href => "/login"} Ingresar
 
 %section.mvp
   .max-container

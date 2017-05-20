@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+    get '/' => 'landing#index'
+    get '/profile' => 'landing#my_profile'
+    get '/login' => 'landing#login'
+    get '/best_practices' => 'landing#best_practices'
+
     namespace :api, defaults: { format: :json } do
         namespace :v1 do
             namespace :login do
@@ -24,8 +29,6 @@ Rails.application.routes.draw do
             end
         end
     end
-    get '/' => 'landing#index'
-    get '/profile' => 'landing#my_profile'
 
     get '*path', to: 'application#index'
 end
