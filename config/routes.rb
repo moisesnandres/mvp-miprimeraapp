@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     end
     get '/' => 'landing#index'
     get '/profile' => 'landing#my_profile'
+    get '/best_practices' => 'landing#best_practices'
 
     get '*path', to: 'application#index'
 end
