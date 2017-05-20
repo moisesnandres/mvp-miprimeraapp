@@ -1,0 +1,22 @@
+.text {
+  &-12 { font-size: 12px; }
+  &-green { color: #2ecc71; }
+  &-red { color: #e74c3c; }
+  &-orange { color: #d35400; }
+  &-blue { color: rgba(41, 128, 185,1.0); }
+}
+
+.bg {
+  &-grey { background-color: rgba(0,0,0,.5); }
+}
+
+#app {
+  background-color: rgba(0,0,0,.05);
+  padding: 30px;
+}
+
+.margin {
+  &-none { margin: 0 !important; }
+  &-top-5 { margin: 5px 0 0 0 !important; }
+  &-bottom-5 { margin: 0 0 5px 0 !important; }
+}
