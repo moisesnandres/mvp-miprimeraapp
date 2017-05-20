@@ -15,6 +15,7 @@ Rails.application.routes.draw do
                 post 'create'
                 post 'delete'
                 post 'update'
+                get 'index'
             end
         end
     end

@@ -104,6 +104,10 @@ GEM
     public_suffix (2.0.5)
     puma (3.8.2)
     puma (3.8.2-java)
+    rabl-rails (0.4.3)
+      activesupport (>= 3.1)
+      railties (>= 3.1)
+      thread_safe (~> 0.3.1)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -210,6 +214,7 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
+  rabl-rails
   rails (~> 5.1.0)
   sass-rails (~> 5.0)
   selenium-webdriver
