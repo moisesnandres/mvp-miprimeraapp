@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import glamorous from 'glamorous';
 import { Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Row } from 'react-bootstrap';
 
 const ProjectContainer = glamorous.div({
   width: '100%',
@@ -37,21 +38,30 @@ const ProjectName = glamorous.h1({
   margin: '0'
 })
 
-const Project = (props) => (
-  <Link to={`/projects/${'2'}`} className="project" >
-    <ProjectContainer>
-      <ProjectImg>
-        <Img src="http://lorempixel.com/output/business-q-c-200-200-10.jpg" />
-      </ProjectImg>
-      <ProjectInfo>
-        <ProjectName className="text-midnight">Company Name 1</ProjectName>
-        <p className="text-12 margin-top-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p className="text-12 margin-none"><span className="text-bold">Tecnologias:</span>: HTML5/CSS3/SASS/JAVASCRIPT/REACT/RUBY</p>
-        <p className="text-12 margin-none"><span className="text-bold">Nº de miembros:</span> 2/6 </p>
-        <p className="text-12 margin-none"><span className="text-bold">Duración:</span> 3 meses (20/06/2017 - 20/09/2017)</p>
-      </ProjectInfo>
-    </ProjectContainer>
-  </Link>
-);
+class Project extends Component {
+  render() {
+    const { id, name, description, percentage, assignments_count, company, step } = this.props;
+    return (
+      <Row>
+        <Link to={`/projects/${id}`} className="project" >
+          <ProjectContainer>
+            <ProjectImg>
+              <Img src="http://lorempixel.com/output/business-q-c-200-200-10.jpg" />
+            </ProjectImg>
+            <ProjectInfo>
+              <ProjectName className="text-midnight">{ name }</ProjectName>
+              <p className="text-12 margin-top-5">{description}</p>
+              <p className="text-12 margin-none"><span className="text-bold">Institución:</span>: {company.name}</p>
+              <p className="text-12 margin-none"><span className="text-bold">Tecnologias:</span>: HTML5/CSS3/SASS/JAVASCRIPT/REACT/RUBY</p>
+              <p className="text-12 margin-none"><span className="text-bold">Nº de miembros:</span> {assignments_count}/6 </p>
+              <p className="text-12 margin-none"><span className="text-bold">Estado:</span> {step.name}</p>
+              <p className="text-12 margin-none"><span className="text-bold">Duración:</span> 3 meses (20/06/2017 - 20/09/2017)</p>
+            </ProjectInfo>
+          </ProjectContainer>
+        </Link>
+      </Row>
+      )
+  }
+}
 
 export default Project;
