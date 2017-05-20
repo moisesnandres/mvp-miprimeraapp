@@ -4,6 +4,7 @@
 .max-container {
   max-width: 1000px;
   padding: 0 2em;
+  margin: 0 auto;
 }
 
 header {
@@ -36,5 +37,40 @@ header {
     align-items: center;
     justify-content: center;
     height: 100%;
+  }
+}
+
+.panel-default {
+  padding: 1em;
+}
+
+.what-you-win {
+  .img-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1em;
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .win__container, .work__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    article {
+      flex: 0 0 48%;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .win__container, .work__container {
+    article {
+      flex: 0 0 32%;
+    }
   }
 }
