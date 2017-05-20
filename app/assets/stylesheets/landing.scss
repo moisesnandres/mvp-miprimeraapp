@@ -17,14 +17,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
+ }
 
   h1 {
     font-size: 1.7em;
     margin: 0 1em 0 0;
     color: #fff;
   }
-
+  h4{
+    font-weight: bold;
+  }
   .nav-pills > li+li {
     margin-left: .5em;
   }
@@ -37,19 +39,21 @@ header {
 .mvp {
   height: 100vh;
   background-color: #545561;
-  color: #fff;
-
+  color: #fff;    background-image: url('http://www.modny73.com/wp-content/uploads/2014/11/Web-Design-Wallpapers-11.jpg');
+  background-size:100%100%;
   .max-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+    color:#FFFFFF;
   }
 }
 
 .panel-default {
   padding: 1em;
+    text-align: center;
 }
 
 .how-it-works {
