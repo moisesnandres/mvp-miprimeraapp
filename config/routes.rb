@@ -5,6 +5,12 @@ Rails.application.routes.draw do
                 post 'create'
                 delete 'destroy'
             end
+            namespace :users do
+                post 'create'
+            end
+            namespace :companies do
+                post 'create'
+            end
         end
     end
     get '/' => 'landing#index'
